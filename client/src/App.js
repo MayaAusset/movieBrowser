@@ -5,8 +5,7 @@ import Container from "react-bootstrap/Container";
 import "./App.css";
 
 function App() {
-  const [movies, setMovies] = useState(undefined);
-  //console.log(`movies is ${movies}`)
+  const [movies, setMovies] = useState([]);
   const getAllMovies = () => {
     const service = new MovieService();
 

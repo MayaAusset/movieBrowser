@@ -1,14 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
 const MoviesList = ({ movies, handleSelectionClick }) => {
-  const [selectedMovie, setSelectedMovie] = useState("undefined");
-
-  //console.log(`selectedMovie  from MovieLIST is ${selectedMovie.title}`);
-  //console.log(`handleSelectionClick is ${handleSelectionClick}`);
-
   return (
     <Container fluid>
       <Row>
@@ -18,7 +13,8 @@ const MoviesList = ({ movies, handleSelectionClick }) => {
               <Button
                 variant="link"
                 onClick={() => {
-                  setSelectedMovie({ movie });
+                  handleSelectionClick(movie);
+                  console.log(movie)
                 }}
               >
                 {movie.title}
