@@ -6,8 +6,8 @@ const express = require("express");
 const favicon = require("serve-favicon");
 const hbs = require("hbs");
 const logger = require("morgan");
-const path = require("path");
 const cors = require("cors");
+const path = require("path");
 
 const app_name = require("./package.json").name;
 const debug = require("debug")(
