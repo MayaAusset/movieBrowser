@@ -5,7 +5,8 @@ import Container from "react-bootstrap/Container";
 import "./App.css";
 
 function App() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(undefined);
+  //console.log(`movies is ${movies}`)
   const getAllMovies = () => {
     const service = new MovieService();
 
@@ -19,12 +20,11 @@ function App() {
 
   useEffect(() => {
     getAllMovies();
-  }, []);
+  }, [setMovies]);
 
   return (
     <div className="App">
       <Container fluid>
-        <h1>MovieBrowser App</h1>
         <MovieSelection movies={movies} />
       </Container>
     </div>

@@ -20,7 +20,6 @@ const SelectedMovie = ({ movie }) => {
         </Card.Body>
       ) : (
         <Card.Body>
-          <img src="not-selected.png" alt="no selected movie" width="200px" />
           <Card.Title>No Movie Selected yet ! </Card.Title>
         </Card.Body>
       )}
