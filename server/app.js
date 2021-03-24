@@ -6,8 +6,8 @@ const express = require("express");
 const favicon = require("serve-favicon");
 const hbs = require("hbs");
 const logger = require("morgan");
-const path = require("path");
 const cors = require("cors");
+const path = require("path");
 
 const app_name = require("./package.json").name;
 const debug = require("debug")(
@@ -48,7 +48,7 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 // default value for title local
 app.locals.title = "Express - Generated with IronGenerator";
 
-const index = require("./routes/index");
-app.use("/", index);
+app.use("/api", require("./routes/index"));
+app.use("/api", require("./routes/movies.routes"));
 
 module.exports = app;
