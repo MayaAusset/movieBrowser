@@ -11,7 +11,7 @@ const SelectedMovie = ({ movie }) => {
           <MovieImage poster={movie.poster_path} />
           <Card.Title>{movie.title}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
-            {movie.release_date}
+            {movie.release_date.slice(0, 4)}
           </Card.Subtitle>
           <Card.Subtitle>
             <Rating>{movie.vote_average}</Rating>
