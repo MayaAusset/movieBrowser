@@ -1,0 +1,28 @@
+{
+  "name": "moviebrowser",
+  "version": "1.0.0",
+  "description": "movie browser application created with react ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MayaAusset/movieBrowser.git"
+  },
+  "keywords": [
+    "reactjs",
+    "javascript",
+    "nodejs",
+    "expressjs",
+    "html",
+    "css",
+    "bootstrap"
+  ],
+  "author": "Maya Ausset",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MayaAusset/movieBrowser/issues"
+  },
+  "homepage": "https://github.com/MayaAusset/movieBrowser#readme"
+}
