@@ -7,7 +7,7 @@ const SelectedMovie = ({ movie }) => {
   return (
     <div>
       {typeof movie != "undefined" ? (
-        <section className="selected-movie">
+        <section className="selected-movie ">
           <div className="selected-movie-up">
             <div className="up-img">
               <MovieImage poster={movie.poster_path} />

@@ -22,7 +22,7 @@ const MoviesList = ({ movies, handleSelectionClick }) => {
                     className="movie-link"
                     onClick={() => {
                       handleSelectionClick(movie);
-                      console.log(movie);
+                      //*console.log(movie);
                     }}
                   >
                     {movie.title}
@@ -36,13 +36,7 @@ const MoviesList = ({ movies, handleSelectionClick }) => {
         <Row>
           <div className="movie-item">
             <div className="movie-item">
-              <button className="movie-link">Movie 1</button>
-            </div>
-            <div className="movie-item">
-              <button className="movie-link">Movie 2</button>
-            </div>
-            <div className="movie-item">
-              <button className="movie-link">Movie 3</button>
+              <button className="movie-link">No movies found with that title</button>
             </div>
           </div>
         </Row>

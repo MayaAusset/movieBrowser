@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MovieService from "../service/movies.service";
 import MoviesList from "./MoviesList";
 import SelectedMovie from "./SelectedMovie";
 import "../App.css";
 
 const MovieSelection = ({ movies }) => {
-  const [searchBarInput, setSearchBarInput] = useState("");
-  const [searchResults, setSearchResults] = useState(movies);
-  const [selectedMovie, setSelectedMovie] = useState(undefined);
 
-  //! searchResults
-  console.log(`searchResults from MOVIESELECTION IS ${searchResults}`);
+  const [searchBarInput, setSearchBarInput] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(undefined);
 
   const handleSelectionClick = (movie) => {
     setSelectedMovie(movie);
@@ -24,7 +22,6 @@ const MovieSelection = ({ movies }) => {
         .getMovie(searchBarInput)
         .then((response) => {
           setSearchBarInput("");
-
           setSearchResults(response.results);
         })
         .catch((error) =>
@@ -32,6 +29,10 @@ const MovieSelection = ({ movies }) => {
         );
     }
   };
+
+  useEffect(() => {
+    setSearchResults(movies)
+  }, [movies])
 
   return (
     <main className="main-container">
