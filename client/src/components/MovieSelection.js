@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import FormControl from "react-bootstrap/FormControl";
 import MovieService from "../service/movies.service";
 import MoviesList from "./MoviesList";
 import SelectedMovie from "./SelectedMovie";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import "../App.css";
 
 const MovieSelection = ({ movies }) => {
@@ -33,25 +30,29 @@ const MovieSelection = ({ movies }) => {
   };
 
   return (
-    <Container fluid className="main-container">
-      <Row>
-        <FormControl
-          type="text"
-          placeholder="Search for a movie..."
-          onChange={(e) => setSearchBarInput(e.target.value)}
-          value={searchBarInput}
-          onKeyPress={search}
-          className="mr-sm-2"
-        />
-        <MoviesList
-          movies={searchResults}
-          handleSelectionClick={handleSelectionClick}
-        />
-      </Row>
-      <Row>
+    <main className="main-container">
+      <section className="section-left">
+        <form className="searchBar">
+          <input
+            type="text"
+            placeholder="Search for a movie..."
+            onChange={(e) => setSearchBarInput(e.target.value)}
+            value={searchBarInput}
+            onKeyPress={search}
+            className="mr-sm-2"
+          />
+        </form>
+        <div className="moviesList">
+          <MoviesList
+            movies={searchResults}
+            handleSelectionClick={handleSelectionClick}
+          />
+        </div>
+      </section>
+      <section className="section-right">
         <SelectedMovie movie={selectedMovie} />
-      </Row>
-    </Container>
+      </section>
+    </main>
   );
 };
 

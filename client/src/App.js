@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MovieService from "./service/movies.service";
 import MovieSelection from "./components/MovieSelection";
-import Container from "react-bootstrap/Container";
+import Logo from "./assets/logo-fleet-modified.png";
 import "./App.css";
 
 function App() {
@@ -22,10 +22,16 @@ function App() {
   }, [setMovies]);
 
   return (
-    <div className="App">
-      <Container fluid>
+    <div>
+      <img
+        className="app-logo"
+        src={Logo}
+        alt="movieBrowser logo"
+        width="100px"
+      />
+      <div className="App">
         <MovieSelection movies={movies} />
-      </Container>
+      </div>
     </div>
   );
 }
