@@ -34,7 +34,7 @@ router.get("/movies/:searchBarInput", (req, res) => {
             res.status(500).json(error);
         }
         )
-        .then(function () {});
+        .then(function () { });
 });
 
 module.exports = router;

@@ -21,13 +21,15 @@ function App() {
     getAllMovies();
   }, [setMovies]);
 
+  //console.log(`Movies from APPJS IS ${movies}`)
+
   return (
     <div>
       <img
         className="app-logo"
         src={Logo}
         alt="movieBrowser logo"
-        width="100px"
+        width="80px"
       />
       <div className="App">
         <MovieSelection movies={movies} />
