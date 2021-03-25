@@ -9,18 +9,22 @@ const MovieSelection = ({ movies }) => {
   const [searchResults, setSearchResults] = useState(movies);
   const [selectedMovie, setSelectedMovie] = useState(undefined);
 
+  //! searchResults
+  console.log(`searchResults from MOVIESELECTION IS ${searchResults}`);
+
   const handleSelectionClick = (movie) => {
     setSelectedMovie(movie);
   };
 
   const search = (event) => {
     if (event.key === "Enter") {
+      event.preventDefault();
       const service = new MovieService();
-
       service
         .getMovie(searchBarInput)
         .then((response) => {
           setSearchBarInput("");
+
           setSearchResults(response.results);
         })
         .catch((error) =>

@@ -17,35 +17,38 @@
 }
 h1 {
   color: #0dd27a;
+  font-weight: 600;
 }
 .app-logo {
   position: relative;
-  top: 0px;
+  top: -40px;
   left: 47%;
   animation: MoveUpDown 3s linear infinite;
 }
 @keyframes MoveUpDown {
   0%,
   100% {
-    transform: translateY(30px);
+    transform: translateY(50px);
   }
   50% {
-    transform: translateY(40px);
+    transform: translateY(60px);
   }
 }
 .App {
-  margin: 5% 10%;
+  margin: 2% 10%;
   border: 0;
   box-shadow: 2px 2px 5px 5px #f5f5f5;
   border-radius: 15px;
   text-align: center;
   color: #363636;
+  height: 500px;
 }
 .main-container {
+  display: flex;
   margin: 0;
   padding-left: 0px;
   border-radius: 15px;
-  display: flex;
+  height: 500px;
 }
 .searchBar {
   padding: 25px;
@@ -65,10 +68,6 @@ h1 {
   outline: 0;
   box-shadow: -10px -10px 30px #1adf86, 10px 10px 30px #1fb370;
 }
-.searchBar img {
-  top: 30px;
-  right: 80px;
-}
 .movie-button {
   width: 100%;
 }
@@ -84,6 +83,10 @@ h1 {
 .movie-item {
   width: 100%;
   padding: 5px;
+}
+.scrollable-content {
+  height: 400px;
+  overflow: auto;
 }
 .movie-item button {
   padding: 15px;
@@ -104,24 +107,104 @@ h1 {
   background-color: #0cc673;
   color: #ffff;
 }
-
-.selected-up {
+.selected-movie {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.selected-movie-up {
   margin: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  text-align: left;
+  text-align: center;
 }
-.selected-up img {
+.selected-movie-up h1 {
+  font-size: 1.55em;
+}
+.selected-movie-up img {
   float: left;
-  width: 250px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
+  border-radius: 10px;
 }
-up-infos {
-  margin-left: 20px;
-}
-.selected-down {
+.selected-movie-down {
   margin: 20px;
+  font-size: 16px;
   text-align: justify;
+}
+.scrollable-content-2 {
+  height: 129px;
+  overflow: auto;
+}
+@media only screen and (max-width: 950px) {
+  .selected-movie-up {
+    flex-direction: column;
+  }
+  .selected-movie-up h1 {
+    margin-top: 15px;
+    font-size: 1.2em;
+  }
+  .selected-movie-up h5 {
+    font-size: 0.8em;
+  }
+  .selected-movie-up img {
+    width: 150px;
+    height: 220px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .App {
+    margin: 4% 5%;
+    height: 560px;
+  }
+  .searchBar {
+    padding: 15px;
+  }
+  .main-container {
+    height: 560px;
+    flex-direction: column;
+  }
+  .section-left {
+    width: 100%;
+  }
+  .section-right {
+    width: 100%;
+    height: 380px;
+    overflow: auto;
+  }
+  .scrollable-content {
+    height: 200px;
+    overflow: auto;
+  }
+  .movie-item button {
+    padding: 10px;
+  }
+  .selected-movie-up {
+    margin: 0;
+  }
+  .selected-movie-up img {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .selected-movie-down {
+    font-size: 0.8em;
+  }
+  .scrollable-content-2 {
+    height: 100px;
+    overflow: auto;
+  }
 }

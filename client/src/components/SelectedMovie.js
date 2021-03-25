@@ -8,19 +8,17 @@ const SelectedMovie = ({ movie }) => {
     <div>
       {typeof movie != "undefined" ? (
         <section className="selected-movie">
-          <div className="selected-up">
+          <div className="selected-movie-up">
             <div className="up-img">
               <MovieImage poster={movie.poster_path} />
             </div>
             <div className="up-infos">
               <h1>{movie.title}</h1>
-              <h4 className="mb-2 text-muted">
-                {movie.release_date.slice(0, 4)}
-              </h4>
+              <h5 className="text-muted">{movie.release_date.slice(0, 4)}</h5>
               <Rating>{movie.vote_average}</Rating>
             </div>
           </div>
-          <div className="selected-down">
+          <div className="selected-movie-down scrollable-content-2">
             <p>{movie.overview}</p>
           </div>
         </section>
