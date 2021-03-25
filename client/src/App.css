@@ -1,16 +1,127 @@
-@font-face {font-family: "Circular Std Book"; src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot"); src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"), url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book") format("svg"); }
-*{
+@font-face {
   font-family: "Circular Std Book";
-  margin: 5px;
+  src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot");
+  src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book")
+      format("svg");
+}
+* {
+  font-family: "Circular Std Book";
+}
+h1 {
+  color: #0dd27a;
+}
+.app-logo {
+  position: relative;
+  top: 0px;
+  left: 47%;
+  animation: MoveUpDown 3s linear infinite;
+}
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
 }
 .App {
-  margin: 5% 15%;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
+  margin: 5% 10%;
+  border: 0;
+  box-shadow: 2px 2px 5px 5px #f5f5f5;
+  border-radius: 15px;
   text-align: center;
+  color: #363636;
 }
-.main-container{
+.main-container {
+  margin: 0;
+  padding-left: 0px;
+  border-radius: 15px;
   display: flex;
 }
+.searchBar {
+  padding: 25px;
+  background-color: #0cc673;
+  border-radius: 15px;
+}
+.searchBar input {
+  padding: 10px;
+  width: 100%;
+  color: #7e7e7e;
+  border: 0px;
+  border-radius: 30px;
+  box-shadow: inset 0 1px 10px rgb(10 10 10 / 10%);
+  transition: 1s;
+}
+.searchBar input:focus {
+  outline: 0;
+  box-shadow: -10px -10px 30px #1adf86, 10px 10px 30px #1fb370;
+}
+.searchBar img {
+  top: 30px;
+  right: 80px;
+}
+.movie-button {
+  width: 100%;
+}
+.section-left {
+  width: 50%;
+}
+.section-right {
+  padding: 20px;
+  width: 50%;
+  background-color: #fafafc;
+  border-radius: 15px;
+}
+.movie-item {
+  width: 100%;
+  padding: 5px;
+}
+.movie-item button {
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  background-color: #ffff;
+  box-shadow: 2px 2px 5px 5px #f5f5f5;
+  border: 0;
+  border-left: 3px solid #0cc673;
+  border-radius: 5px 10px 10px 5px;
+  transition: 0.5s;
+}
+.movie-item button:hover {
+  background-color: #0cc673;
+  color: #ffff;
+}
+.movie-item button:focus {
+  background-color: #0cc673;
+  color: #ffff;
+}
 
+.selected-up {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: left;
+}
+.selected-up img {
+  float: left;
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+}
+up-infos {
+  margin-left: 20px;
+}
+.selected-down {
+  margin: 20px;
+  text-align: justify;
+}
