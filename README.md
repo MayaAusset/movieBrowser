@@ -54,7 +54,7 @@ ENV=development
 
 API_KEY=(the Api Key you created in the previous step)
 ```
-4. In `client` creat an `.env.development.local` file  
+4. In `client` create an `.env.development.local` file  
 -Create one variable inside that .env.development.local file : 
 ```
 REACT_APP_BASE_URL = http://localhost:5000/
