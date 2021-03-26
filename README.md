@@ -1,5 +1,7 @@
 # movieBrowser
-Movie Browsing application
+[Movie Browsing application](https://movie-browser-oc.herokuapp.com/)
+
+<img width="1280" alt="movieBrowser" src="https://user-images.githubusercontent.com/60138632/112638308-67c54f00-8e3f-11eb-8ecc-87d1cf6172b4.png">
 
 ## Table of contents
 * [General info](#general-info)
