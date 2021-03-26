@@ -8,7 +8,7 @@ Movie Browsing application
 
 ## General info
 This project is a Movie Browsing Application made with ReactJS.  
-You can browses movies using the OMDb API and show a specific movie's informations !  
+You can browse movies using the OMDb API and show a specific movie's informations !  
 
 ## Technologies used 
 -ReactJS  
@@ -21,7 +21,7 @@ You can browses movies using the OMDb API and show a specific movie's informatio
 -Express  
 
 ## Setup 
-To run this projects, you will need Node.js and NPM installed.  
+To run this project, you will need Node.js and NPM installed.  
 You can check if you already have them
 installed by opening a terminal and running `node --version` and `npm --version`.  
 If numbers are printed, you're good to go.  
@@ -45,7 +45,7 @@ Before starting the app, you would encounter some errors because the ports and m
 2. Generate an API key (as described here : [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction) . Use version 3 of the API as its authentication mechanism is simpler than v4)  
 
 3. In `server` create an `.env` file  
--Create these three variable inside that .env file : 
+-Create these three variables inside that .env file : 
 ```
 PORT=5000
 ENV=development
