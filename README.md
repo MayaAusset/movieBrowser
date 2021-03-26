@@ -57,7 +57,7 @@ API_KEY=(the Api Key you created in the previous step)
 ```
 REACT_APP_BASE_URL = http://localhost:5000/
 ```
-5. Then, you will need to run the following commands :  
+5. Then, you will need to run the following command :  
 
 ```
 $ npm run concurrently
