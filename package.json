@@ -4,7 +4,12 @@
   "description": "movie browser application created with react ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install-server": "npm install --prefix server",
+    "init-server": "node server/bin/www",
+    "start": "npm run install-server && npm run init-server",
+    "build-client": "npm run build --prefix client",
+    "install-client": "npm install --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build-client"
   },
   "repository": {
     "type": "git",
