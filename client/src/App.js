@@ -3,11 +3,9 @@ import MovieService from "./service/movies.service";
 import MovieSelection from "./components/MovieSelection";
 import Logo from "./assets/logo-fleet-modified.png";
 import "./App.css";
-//import TestComponent from "./components/TestComponent";
 
 function App() {
-  const [movies, setMovies] = useState([{ title: "from useState", key: 1 }]);
-  const [pages, setPages] = useState(1);
+  const [movies, setMovies] = useState([]);
 
   const getAllMovies = () => {
     const service = new MovieService();
@@ -15,9 +13,7 @@ function App() {
     service
       .getAllMovies()
       .then((response) => {
-        //console.log(`movies BEFORE IS ${movies.length}`);
         setMovies(response.results);
-        //console.log(`movies inside AFTER ${movies.length}`);
       })
       .catch((err) => console.log(`error from App Component, ${err}`));
   };
@@ -36,7 +32,6 @@ function App() {
       />
       <div className="App">
         <MovieSelection movies={movies} />
-        {/* <TestComponent movies={movies}/> */}
       </div>
     </div>
   );

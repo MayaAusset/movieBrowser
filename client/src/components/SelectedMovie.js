@@ -24,16 +24,13 @@ const SelectedMovie = ({ movie }) => {
         </section>
       ) : (
         <section>
-          <h4>No Movie Selected yet ! </h4>
+          <h4>No Movie Selected yet </h4>
           <img
             src={NoImage}
             alt="Icon made by Freepik from www.flaticon.com"
             width="200px"
           />
-          <p>
-            Type in a movie's name in the search bar and click on the title to
-            display its informations
-          </p>
+          <p>Click on a title to display its informations !</p>
         </section>
       )}
     </div>

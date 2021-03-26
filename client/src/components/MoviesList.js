@@ -17,12 +17,11 @@ const MoviesList = ({ movies, handleSelectionClick }) => {
                 key={movie.id}
                 className="movie-item"
               >
-                <div key={movie.id} >
+                <div key={movie.id}>
                   <button
                     className="movie-link"
                     onClick={() => {
                       handleSelectionClick(movie);
-                      //*console.log(movie);
                     }}
                   >
                     {movie.title}
@@ -36,7 +35,9 @@ const MoviesList = ({ movies, handleSelectionClick }) => {
         <Row>
           <div className="movie-item">
             <div className="movie-item">
-              <button className="movie-link">No movies found with that title</button>
+              <button className="movie-link">
+                No movies found with that title...
+              </button>
             </div>
           </div>
         </Row>

@@ -5,7 +5,6 @@ import SelectedMovie from "./SelectedMovie";
 import "../App.css";
 
 const MovieSelection = ({ movies }) => {
-
   const [searchBarInput, setSearchBarInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(undefined);
@@ -31,8 +30,8 @@ const MovieSelection = ({ movies }) => {
   };
 
   useEffect(() => {
-    setSearchResults(movies)
-  }, [movies])
+    setSearchResults(movies);
+  }, [movies]);
 
   return (
     <main className="main-container">
