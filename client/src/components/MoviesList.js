@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 const MoviesList = ({ movies, handleSelectionClick }) => {
   return (
+    <div className="moviesList">
     <Container fluid className="scrollable-content">
       {movies.length !== 0 ? (
         <Row>
@@ -43,6 +44,7 @@ const MoviesList = ({ movies, handleSelectionClick }) => {
         </Row>
       )}
     </Container>
+    </div>
   );
 };
 
