@@ -35,7 +35,8 @@ $ git clone https://github.com/MayaAusset/movieBrowser.git
 $ cd movieBrowser
 $ cd client 
 $ npm install
-$ cd .. && server
+$ cd ..
+$ cd server
 $ npm install 
 ```
 Before starting the app, you would encounter some errors because the ports and movieDB API Key are located in .env files (hence will not appear in your cloned code).  
