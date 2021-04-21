@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import NoMoviesFound from "./NoMoviesFound";
 import SelectableMovieTitle from "./SelectableMovieTitle";
 
-const MoviesList = ({ movies, handleSelectionClick, searchResults }) => {
+const MoviesList = ({ movies, handleSelectionClick }) => {
   return (
     <div className="moviesList">
       <Container fluid className="scrollable-content">
@@ -13,6 +13,7 @@ const MoviesList = ({ movies, handleSelectionClick, searchResults }) => {
             {movies.map((movie) => {
               return (
                 <SelectableMovieTitle
+                  key={movie.id}
                   movie={movie}
                   handleSelectionClick={handleSelectionClick}
                 />

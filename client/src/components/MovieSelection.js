@@ -33,7 +33,6 @@ const MovieSelection = () => {
         <section className="section-left">
           <SearchBar setSearchResults={setSearchResults} />
           <MoviesList
-            searchResults={searchResults}
             movies={searchResults}
             handleSelectionClick={handleSelectionClick}
           />

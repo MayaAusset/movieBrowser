@@ -1,11 +1,18 @@
 import React from "react";
 import magnifyingGlass from "../assets/magnifying-glass.png";
-import deleteCross from "../assets/delete-cross.png";
+import DeleteInputButton from "./DeleteInputButton";
+//import deleteCross from "../assets/delete-cross.png";
 
-const SearchBarInput = ({ search, searchBarInput, handleDeleteButon }) => {
+const SearchBarInput = ({ search, searchBarInput,clearInput }) => {
+    /* const deleteInputHandler = () => {
+        console.log("from handler")
+        //event.preventDefault()
+        setSearchBarInput("")
+    } */
+
   return (
     <div className="searchBar">
-      <form>
+      <div>
         <img
           src={magnifyingGlass}
           width="20px"
@@ -19,10 +26,12 @@ const SearchBarInput = ({ search, searchBarInput, handleDeleteButon }) => {
           value={searchBarInput}
           className="mr-sm-2"
         />
-        <button onClick={() => handleDeleteButon()}>
+        <DeleteInputButton clearInput={clearInput}/>
+       {/*  <button type="button" onClick={()=>deleteInputHandler()}>
           <img src={deleteCross} width="10" alt="delete input button" />
-        </button>
-      </form>
+        </button> */}
+        {/* <button type="button" oncClick={() => buttonHandler()}>NEW BUTTON</button> */}
+      </div>
     </div>
   );
 };

@@ -55,7 +55,7 @@ h1 {
   background-color: #0cc673;
   border-radius: 15px;
 }
-.searchBar form{
+.searchBar div{
   display: flex;
   flex-direction: row;
   position: relative;

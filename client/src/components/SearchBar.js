@@ -6,18 +6,18 @@ import SearchInputResult from "./SearchInputResult";
 const SearchBar = ({ setSearchResults }) => {
   const [searchBarInput, setSearchBarInput] = useState("");
 
+  const clearInput = () => {
+    setSearchBarInput("")
+  }
+
   const search = (event) => {
     event.preventDefault();
     setSearchBarInput(event.target.value);
   };
 
-  const handleDeleteButon = () => {
-    setSearchBarInput("");
-  };
-
   useEffect(() => {
     if (searchBarInput === "") {
-      setSearchResults("");
+      setSearchResults([]);
     }
 
     const service = new MovieService();
@@ -27,14 +27,15 @@ const SearchBar = ({ setSearchResults }) => {
         setSearchResults(response.results);
       })
       .catch((error) => console.log(`Error from SearchBar.js : ${error}`));
+      
   }, [searchBarInput]);
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
   return (
     <div>
       <SearchBarInput search={search} searchBarInput={searchBarInput} />
       <SearchInputResult
         searchBarInput={searchBarInput}
-        handleDeleteButon={handleDeleteButon}
+        clearInput={clearInput}
       />
     </div>
   );
