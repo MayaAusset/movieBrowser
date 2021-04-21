@@ -1,14 +1,14 @@
 import React from "react";
 
-const SearchInput = ({ input }) => {
+const SearchInput = ({ searchBarInput }) => {
   return (
-    <div>
-      {input.length === 0 ? (
-        <p className="results-search-input">Movies currently shown in theatre</p>
-      ) : (
-        <p className="results-search-input">
-          Search results for <em>"{input}"</em>
+    <div className="results-search-input">
+      {searchBarInput.length > 0 ? (
+        <p>
+          Search results for <em className="searched-title">"{searchBarInput}"</em>
         </p>
+      ) : (
+        <p>Movies currently shown in theatre</p>
       )}
     </div>
   );

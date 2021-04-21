@@ -71,6 +71,13 @@ h1 {
 .results-search-input{
   padding: 10px;
 }
+.results-search-input p{
+  color: #1adf86;
+  margin-bottom: 0;
+}
+.searched-title{
+  color: #0f0096;;
+}
 .movie-button {
   width: 100%;
 }
@@ -88,7 +95,7 @@ h1 {
   padding: 5px;
 }
 .scrollable-content {
-  height: 400px;
+  height: 355px;
   overflow: auto;
 }
 .movie-item button {

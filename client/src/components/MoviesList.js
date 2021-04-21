@@ -5,12 +5,11 @@ import SearchInput from "./SearchInput";
 import NoMoviesFound from "./NoMoviesFound";
 import SelectableMovieTitle from "./SelectableMovieTitle";
 
-const MoviesList = ({ movies, handleSelectionClick, searchBarInput }) => {
+const MoviesList = ({ movies, handleSelectionClick, searchResults }) => {
   return (
     <div className="moviesList">
       <Container fluid className="scrollable-content">
-        <SearchInput input={searchBarInput}/>
-        {movies.length !== 0 ? (
+        {movies && movies.length !== 0 ? (
           <Row>
             {movies.map((movie) => {
               return (
