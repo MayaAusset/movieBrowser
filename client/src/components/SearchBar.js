@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MovieService from "../service/movies.service";
-import SearchInput from "./SearchInput";
+import SearchBarInput from "./SearchBarInput";
+import SearchInputResult from "./SearchInputResult";
 
 const SearchBar = ({ setSearchResults }) => {
   const [searchBarInput, setSearchBarInput] = useState("");
@@ -26,16 +27,8 @@ const SearchBar = ({ setSearchResults }) => {
 
   return (
     <div>
-      <form className="searchBar">
-        <input
-          type="text"
-          placeholder="Search for a movie..."
-          onChange={search}
-          value={searchBarInput}
-          className="mr-sm-2"
-        />
-      </form>
-      <SearchInput searchBarInput={searchBarInput}/>
+      <SearchBarInput search={search} searchBarInput={searchBarInput}/>
+      <SearchInputResult searchBarInput={searchBarInput}/>
     </div>
   );
 };

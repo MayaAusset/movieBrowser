@@ -6,7 +6,6 @@ import SelectedMovie from "./SelectedMovie";
 import "../App.css";
 
 const MovieSelection = () => {
-  //const [searchBarInput, setSearchBarInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(undefined);
 
@@ -24,22 +23,6 @@ const MovieSelection = () => {
     setSelectedMovie(movie);
   };
 
-  /* const search = (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      const service = new MovieService();
-      service
-        .getMovie(searchBarInput)
-        .then((response) => {
-          setSearchBarInput("");
-          setSearchResults(response.results);
-        })
-        .catch((error) =>
-          console.log(`error from MovieSelection Component: ${error}`)
-        );
-    }
-  }; */
-
   useEffect(() => {
     getAllMovies();
   }, []);
@@ -49,8 +32,6 @@ const MovieSelection = () => {
       <main className="main-container">
         <section className="section-left">
           <SearchBar
-            //search={search}
-            //searchBarInput={searchBarInput}
             setSearchResults={setSearchResults}
           />
           <MoviesList

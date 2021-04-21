@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchInput = ({ searchBarInput }) => {
+const SearchInputResult = ({ searchBarInput }) => {
   return (
     <div className="results-search-input">
       {searchBarInput.length > 0 ? (
@@ -14,4 +14,4 @@ const SearchInput = ({ searchBarInput }) => {
   );
 };
 
-export default SearchInput;
+export default SearchInputResult;
