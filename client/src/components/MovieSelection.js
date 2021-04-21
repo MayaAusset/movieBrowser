@@ -31,9 +31,7 @@ const MovieSelection = () => {
     <div className="App">
       <main className="main-container">
         <section className="section-left">
-          <SearchBar
-            setSearchResults={setSearchResults}
-          />
+          <SearchBar setSearchResults={setSearchResults} />
           <MoviesList
             searchResults={searchResults}
             movies={searchResults}

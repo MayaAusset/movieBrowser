@@ -11,6 +11,10 @@ const SearchBar = ({ setSearchResults }) => {
     setSearchBarInput(event.target.value);
   };
 
+  const handleDeleteButon = () => {
+    setSearchBarInput("");
+  };
+
   useEffect(() => {
     if (searchBarInput === "") {
       setSearchResults("");
@@ -27,8 +31,11 @@ const SearchBar = ({ setSearchResults }) => {
 
   return (
     <div>
-      <SearchBarInput search={search} searchBarInput={searchBarInput}/>
-      <SearchInputResult searchBarInput={searchBarInput}/>
+      <SearchBarInput search={search} searchBarInput={searchBarInput} />
+      <SearchInputResult
+        searchBarInput={searchBarInput}
+        handleDeleteButon={handleDeleteButon}
+      />
     </div>
   );
 };

@@ -55,8 +55,26 @@ h1 {
   background-color: #0cc673;
   border-radius: 15px;
 }
+.searchBar form{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.magnifying-glass {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+}
+.searchBar button{
+  position: absolute;
+  top: 7px;
+  right: 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+}
 .searchBar input {
-  padding: 10px;
+  padding: 10px 40px;
   width: 100%;
   color: #7e7e7e;
   border: 0px;
