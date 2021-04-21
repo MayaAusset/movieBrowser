@@ -1,7 +1,6 @@
 # movieBrowser
 [Movie Browsing application](https://movie-browser-oc.herokuapp.com/)
-
-<img width="1280" alt="movieBrowser" src="https://user-images.githubusercontent.com/60138632/112638308-67c54f00-8e3f-11eb-8ecc-87d1cf6172b4.png">
+<img width="1225" alt="Screenshot 2021-04-21 at 15 49 33" src="https://user-images.githubusercontent.com/60138632/115565053-55f98f00-a2b9-11eb-87be-cf615baf6acd.png">
 
 ## Table of contents
 * [General info](#general-info)
