@@ -2,19 +2,19 @@ import React, { Component } from "react";
 
 class Rating extends Component {
   render() {
-    let n = this.props.children;
+    let note = Math.floor(this.props.children);
+    let hearts = [];
+
+    for (let heartsDisplayed = 0; heartsDisplayed < 10; heartsDisplayed++) {
+      if (heartsDisplayed < note) {
+        hearts.push("💚");
+      } else {
+        hearts.push("🤍");
+      }
+    }
     return (
       <div className="Rating">
-        {n >= 1 ? "💚" : "🤍"}
-        {n >= 2 ? "💚" : "🤍"}
-        {n >= 3 ? "💚" : "🤍"}
-        {n >= 4 ? "💚" : "🤍"}
-        {n >= 5 ? "💚" : "🤍"}
-        {n >= 6 ? "💚" : "🤍"}
-        {n >= 7 ? "💚" : "🤍"}
-        {n >= 8 ? "💚" : "🤍"}
-        {n >= 9 ? "💚" : "🤍"}
-        {n >= 10 ? "💚" : "🤍"}
+        <p>{hearts}</p>
       </div>
     );
   }

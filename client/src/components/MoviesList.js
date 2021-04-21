@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import SearchInput from "./SearchInputResult";
 import NoMoviesFound from "./NoMoviesFound";
 import SelectableMovieTitle from "./SelectableMovieTitle";
 
