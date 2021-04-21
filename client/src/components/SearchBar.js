@@ -7,9 +7,8 @@ const SearchBar = ({ setSearchResults }) => {
   const [searchBarInput, setSearchBarInput] = useState("");
 
   const deleteInputHandler = () => {
-    console.log("FROM inside CLEAR INPUT ")
-    setSearchBarInput("")
-  }
+    setSearchBarInput("");
+  };
 
   const search = (event) => {
     event.preventDefault();
@@ -28,16 +27,17 @@ const SearchBar = ({ setSearchResults }) => {
         setSearchResults(response.results);
       })
       .catch((error) => console.log(`Error from SearchBar.js : ${error}`));
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchBarInput]);
 
   return (
     <div>
-      <SearchBarInput search={search} searchBarInput={searchBarInput} deleteInputHandler={deleteInputHandler}/>
-      <SearchInputResult
+      <SearchBarInput
+        search={search}
         searchBarInput={searchBarInput}
-        
+        deleteInputHandler={deleteInputHandler}
       />
+      <SearchInputResult searchBarInput={searchBarInput} />
     </div>
   );
 };
