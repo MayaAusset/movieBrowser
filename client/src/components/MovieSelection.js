@@ -54,6 +54,7 @@ const MovieSelection = () => {
             setSearchBarInput={setSearchBarInput}
           />
           <MoviesList
+            searchBarInput={searchBarInput}
             movies={searchResults}
             handleSelectionClick={handleSelectionClick}
           />
